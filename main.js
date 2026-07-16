@@ -1,10 +1,10 @@
 import Reveal from 'reveal.js';
-import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css'; // pick any theme
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
 
-// optional plugins
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
-import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
+// optional plugins — also renamed, no more .esm.js suffix
+import Markdown from 'reveal.js/plugin/markdown';
+import Highlight from 'reveal.js/plugin/highlight';
 import 'reveal.js/plugin/highlight/monokai.css';
 
 const deck = new Reveal({
