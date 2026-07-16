@@ -15,7 +15,14 @@ This repo hosts a [reveal.js](https://revealjs.com/) presentation built with [Vi
 
 1. **Clone the repo** (with https or ssh) and change directories into it. 
    ```bash
-   git clone <our repo clone info>
+   git clone git@github.com:TEIC/timeForP6.git
+   cd timeForP6
+   ```
+
+   or (with https)
+
+   ```bash
+   git clone https://github.com/TEIC/timeForP6.git
    cd timeForP6
    ```
 
