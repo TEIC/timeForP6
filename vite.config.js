@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        dh2026: resolve(__dirname, 'dh2026.html'),
+        /*editopia: resolve(__dirname, 'editopia.html'),*/
         // add each new conference deck here as you create it
       },
     },
