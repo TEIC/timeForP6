@@ -1,0 +1,31 @@
+.reveal pre code {
+    font-size: .7em;
+}
+/* links: underline for accessibility!  */
+.reveal a {text-decoration:underline;}
+
+/* ebb: For Flex containers */
+.flex {
+  display: flex;
+  /* gap: 2rem; */
+  align-items: center;
+  height:100%; /* fills the available slide height */
+}
+
+/* for the contained blocks inside a flex container */
+.flex figure {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
+  margin: 0;
+}
+
+.flex img, .flexReverse img {
+  max-width: 100%;
+  max-height: 500px; /* ebb: note: this just sets a hard limit on how big any image can scale */
+}
+.flex > div {
+    flex-grow:1;
+    flex-shrink: 1;
+    flex-basis: 60%;
+}
