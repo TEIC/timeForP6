@@ -1,6 +1,7 @@
 import Reveal from 'reveal.js';
 import 'reveal.js/reveal.css';
-import 'reveal.js/theme/black.css';
+import 'reveal.js/theme/serif.css';
+import './localStyle.css';
 
 // optional plugins — also renamed, no more .esm.js suffix
 import Markdown from 'reveal.js/plugin/markdown';
