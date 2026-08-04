@@ -28,7 +28,7 @@
   <!-- 1. abstract model -->
   <rect x="15" y="8" width="280" height="52" rx="6" fill="#e8f0f7" stroke="#034d7e"/>
   <text x="155" y="30" class="t">Abstract Model</text>
-  <text x="155" y="48" class="s">concepts, classes, traits, scopes</text>
+  <text x="155" y="48" class="s">concepts, classes, etc.</text>
 
   <path d="M 155 60 V 84" marker-end="url(#p6arrow)"/>
   <text x="163" y="76" class="e">instantiate</text>
