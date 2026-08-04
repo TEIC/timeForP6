@@ -1,8 +1,12 @@
 .reveal pre code {
     font-size: .7em;
 }
+.reveal .smaller {
+  font-size: .7em;
+}
 /* links: underline for accessibility!  */
 .reveal a {text-decoration:underline;}
+
 
 /* ebb: For Flex containers */
 .flex {
@@ -28,4 +32,8 @@
     flex-grow:1;
     flex-shrink: 1;
     flex-basis: 60%;
+}
+
+div.footer {
+  text-align:left;
 }
