@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>It’s Time for P6 – TEI2026 Vancouver</title>
-  <script type="module" crossorigin src="/timeForP6/assets/main-47a3JOsU.js"></script>
+  <script type="module" crossorigin src="/timeForP6/assets/main-Bm7Q5yrK.js"></script>
   <link rel="stylesheet" crossorigin href="/timeForP6/assets/main-D8xPCgie.css">
 </head>
 <body>
@@ -105,7 +105,7 @@
           
           </section>
           <section>
-            <h3>Over time, problems intensify</h3>
+            <h4>Over time, problems accumulate</h4>
           <ul>
                  <li class="fragment">When P5 was launched, Council had been recently established in its current form to maintain and update it.</li>
                  <li class="fragment">Consistency in updates was difficult / impossible over time.</li>
@@ -124,48 +124,56 @@
             <li class="fragment">We will still encode in XML, but TEI should <em>also</em> be readily expressible in other formats (e.g. graph models).</li>
             <li class="fragment">TEI concepts come first – users should be able to:
               <ul>
-                <li class="fragment">know how to do something (<em>how do I?</em>)</li>
-                <li class="fragment">how to adjust it to their research needs (<em>why can’t I?</em>)</li>
-                <li class="fragment">express concepts as elements, attributes, or non-XML constructs as needed.</li>
+                <li class="fragment">Know how to do something (<em>how do I?</em>)</li>
+                <li class="fragment">Adjust it to their research needs (<em>why can’t I?</em>)</li>
+                <li class="fragment">Express concepts as elements, attributes, or non-XML constructs as needed.</li>
               </ul>
             </li>
           </ul>
         </section>
-        <section>
+        <section> 
           <h4>But P5 is not all bad! What aspects of P5 should continue in P6?</h4>
-          <ul class="smaller">
+          <ul>
             <li class="fragment">The TEI header
               <ul>
                 <li>Highly expressive modeling of document metadata for which TEI is widely known / heralded</li>
-                <li>Problematic: Extremely and perhaps unnecessarily prescriptive.</li>
+                <li>Problematic: Extremely and perhaps excessively prescriptive.</li>
                 <li>Nevertheless, an excellent place for standardizing data exchange.</li>
               </ul>
              </li>
              <li class="fragment">Capacity to prepare many kinds of output data from the same "ground" source TEI document.</li>
             <li class="fragment">Encoding in XML and tree structure for ease of processing
                <ul>
-                 <li>e.g. <code>standOff</code> data structures together with trees for preparing editions and data</li>
+                 <li>e.g., <code>standOff</code> data structures together with trees for preparing editions and data</li>
                </ul>
             </li>
-            <li class="fragment">Multiple encoding methods => encoding methods can be chosen adequately to the methods in your project.</li>
+            <li class="fragment">Multiple encoding methods => can help to select an encoding strategy appropriate for your project.</li>
 
-            <li class="fragment">We identified this as a problem:  <q>P5 has too many ways of doing the same thing</q>, 
-                    but it is not only the <strong>thing</strong> that has to be done, but also the <strong>way</strong> it is done 
-                    that needs to be appropriate.
-                    <ul>
-                    <li>e.g. nested/treelike approaches vs. standoff markup/pointer based vs. milestones.</li>
-                    </ul>
-            </li>
-            <li class="fragment">Remember: the TEI vocabulary works like a lingua franca for digital scholarly editions 
-              (and other fields) and needs to be retained.
-                <ul>
-                  <li>e.g. when we talk about <code>&lt;pb&gt;</code>, every other edition nerd understands we are talking about <q>page-beginning</q>.</li>
-                </ul>
-              </li>
+
           </ul>
         </section>
         <section>
-          <h3>How will P6 be different from P5?</h3>
+          <h4>Wisdom accrued from P5</h4>
+          <ul>
+            <li class="fragment"><q>P5 has too many ways of doing the same thing</q>, 
+              but it is not only the <strong>thing</strong> that has to be done, but also the <strong>way</strong> it is done 
+              that needs to be appropriate.
+              <ul>
+                <li>e.g., nested/treelike approaches vs. standoff markup/pointer based vs. milestones.</li>
+              </ul>
+            </li>
+            <li class="fragment">The TEI vocabulary works like a lingua franca for digital scholarly editions 
+              (and other fields) and needs to be retained.
+              <ul>
+                <li>e.g., when we talk about <code>&lt;pb&gt;</code>, every other edition nerd understands we are talking about <q>page-beginning</q>.</li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </section>
+        <section>
+          <h4>How will P6 be different from P5?</h4>
           <ul>
             <li class="fragment">The abstract model should focus on concepts over serialization and content models.</li>
             <li class="fragment">Simplify: Reduce redundancies and points of confusion.</li>
@@ -186,35 +194,36 @@
               </div>
               <div class="column fragment">
                 <p class="smaller" style="margin: 0;">Possible inspiration: <a href="https://schema.org/">schema.org</a></p>
-                <img class="column" src="/timeForP6/assets/schemaorg-Ctrp-dUD.png"/>
+                <img class="column" alt="image of hierarchy types from schema.org" src="/timeForP6/assets/schemaorg-Ctrp-dUD.png"/>
               </div>
             </div>
           </div>
         </section>
         <section>
           <h3>A possible path for P6</h3>
-          <h4>Blueprints</h4>
+          <h4>About <q>Blueprints</q> ...</h4>
           <ul>
-            <li class="fragment">The abstract model gets instantiated into multiple concrete representations, or "blueprints," for specific use cases and serialization targets.</li>
+            <li class="fragment">Blueprints instantiate the abstract model into multiple concrete representations for specific use cases and serialization targets.</li>
             <li class="fragment">TEI Council would maintain a number of official blueprints.</li>
-            <li class="fragment">Communities of practice and large projects can define and share their own blueprints and potentially compete with council ones.</li>
+            <li class="fragment">Communities of practice and large projects can define and share their own blueprints and co-exist with Council ones.</li>
             <li class="fragment">Further customizations can be applied to blueprints to adapt them to specific project needs.</li>
           </ul>
         </section>
         <section>
           <h3>What would P6 and its infrastructure look like?</h3>
-          <div class="columns">
-            <div class="column">
-              <p>Blueprint processes require infrastructure to support the creation, sharing, and adaptation of blueprints.</p>
+          <div class="flex">
+            <div>
+             <!-- ebb: unncessary b/c we cover it in the bullets? Also, my flex container CSS styling helps things to fit better here than Reveal's native columns. 
+               <p>Blueprint processes require infrastructure to support the creation, sharing, and adaptation of blueprints.</p>-->
               <ul>
-                <li>P6 Guidelines should centrally provide interactive support for blueprint processes.</li>
-                <li>A registry of blueprints should be established, akin to a package manager (PyPI, npm, etc.)</li>
+                <li class="fragment">P6 Guidelines should centrally provide interactive support for blueprint processes.</li>
+                <li class="fragment">A registry of blueprints should be established in a repository, akin to a package manager (PyPI, npm, etc.)</li>
               </ul>
             </div>
-            <div class="column">
+            <figure>
               <img class="p6diagram" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDAgMzkyIiByb2xlPSJpbWciCiAgICAgYXJpYS1sYWJlbGxlZGJ5PSJwNnRpdGxlIHA2ZGVzYyI+CiAgPHRpdGxlIGlkPSJwNnRpdGxlIj5QNiBtb2RlbCwgYmx1ZXByaW50cywgYW5kIGluZnJhc3RydWN0dXJlPC90aXRsZT4KICA8ZGVzYyBpZD0icDZkZXNjIj5MYXllcmVkIGRpYWdyYW06IGFuIGFic3RyYWN0IG1vZGVsIGlzIGluc3RhbnRpYXRlZCBpbnRvIGJsdWVwcmludHMgKGNvdW5jaWwgVEVJIFhNTCwKICAgIGFsdGVybmF0aXZlIHNlcmlhbGl6YXRpb25zLCBjb21tdW5pdHkgb25lcyksIG9wdGlvbmFsbHkgYWRhcHRlZCBieSBjdXN0b21pemF0aW9ucywgcHJvY2Vzc2VkIGludG8KICAgIHNjaGVtYXMgYW5kIGRvY3VtZW50YXRpb24sIGFuZCB1c2VkIHRvIGVuY29kZSBURUkgZG9jdW1lbnRzLiBBIHJlZ2lzdHJ5IGV4Y2hhbmdlcyBibHVlcHJpbnRzIGFuZAogICAgaW50ZXJhY3RpdmUgdG9vbHMgc3VwcG9ydCB0aGVtLjwvZGVzYz4KICA8c3R5bGU+CiAgICB0ZXh0IHsKICAgICAgZm9udC1mYW1pbHk6ICJQYWxhdGlubyBMaW5vdHlwZSIsICJCb29rIEFudGlxdWEiLCBQYWxhdGlubywgRnJlZVNlcmlmLCBzZXJpZjsKICAgICAgdGV4dC1hbmNob3I6IG1pZGRsZTsKICAgICAgZmlsbDogIzAwMDsKICAgIH0KICAgIC50IHsgZm9udC1zaXplOiAxNXB4OyB9CiAgICAucyB7IGZvbnQtc2l6ZTogMTEuNXB4OyB9CiAgICAuZSB7IGZvbnQtc2l6ZTogMTFweDsgZm9udC1zdHlsZTogaXRhbGljOyB0ZXh0LWFuY2hvcjogc3RhcnQ7IGZpbGw6ICMwMzRkN2U7IH0KICAgIHBhdGggeyBmaWxsOiBub25lOyBzdHJva2U6ICMwMzRkN2U7IHN0cm9rZS13aWR0aDogMS41OyB9CiAgICBwYXRoLmhlYWQgeyBmaWxsOiAjMDM0ZDdlOyBzdHJva2U6IG5vbmU7IH0KICA8L3N0eWxlPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0icDZhcnJvdyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IgogICAgICAgICAgICBtYXJrZXJXaWR0aD0iNSIgbWFya2VySGVpZ2h0PSI1IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+CiAgICAgIDxwYXRoIGNsYXNzPSJoZWFkIiBkPSJNIDAgMCBMIDEwIDUgTCAwIDEwIHoiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KCiAgPCEtLSAxLiBhYnN0cmFjdCBtb2RlbCAtLT4KICA8cmVjdCB4PSIxNSIgeT0iOCIgd2lkdGg9IjI4MCIgaGVpZ2h0PSI1MiIgcng9IjYiIGZpbGw9IiNlOGYwZjciIHN0cm9rZT0iIzAzNGQ3ZSIvPgogIDx0ZXh0IHg9IjE1NSIgeT0iMzAiIGNsYXNzPSJ0Ij5BYnN0cmFjdCBNb2RlbDwvdGV4dD4KICA8dGV4dCB4PSIxNTUiIHk9IjQ4IiBjbGFzcz0icyI+Y29uY2VwdHMsIGNsYXNzZXMsIGV0Yy48L3RleHQ+CgogIDxwYXRoIGQ9Ik0gMTU1IDYwIFYgODQiIG1hcmtlci1lbmQ9InVybCgjcDZhcnJvdykiLz4KICA8dGV4dCB4PSIxNjMiIHk9Ijc2IiBjbGFzcz0iZSI+aW5zdGFudGlhdGU8L3RleHQ+CgogIDwhLS0gMi4gYmx1ZXByaW50cyAtLT4KICA8cmVjdCB4PSIxNSIgeT0iODYiIHdpZHRoPSIyODAiIGhlaWdodD0iODAiIHJ4PSI2IiBmaWxsPSIjZmFmMGY1IiBzdHJva2U9IiNjODA0NjYiLz4KICA8dGV4dCB4PSIxNTUiIHk9IjEwNSIgY2xhc3M9InQiPkJsdWVwcmludHM8L3RleHQ+CiAgPHJlY3QgeD0iMjIiIHk9IjExNCIgd2lkdGg9Ijg0IiBoZWlnaHQ9IjQ0IiByeD0iNCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjYzgwNDY2Ii8+CiAgPHRleHQgeD0iNjQiIHk9IjEzMiIgY2xhc3M9InMiPlRFSSBYTUw8L3RleHQ+CiAgPHRleHQgeD0iNjQiIHk9IjE0NyIgY2xhc3M9InMiPihjb3VuY2lsKTwvdGV4dD4KICA8cmVjdCB4PSIxMTMiIHk9IjExNCIgd2lkdGg9Ijg0IiBoZWlnaHQ9IjQ0IiByeD0iNCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjYzgwNDY2Ii8+CiAgPHRleHQgeD0iMTU1IiB5PSIxMzIiIGNsYXNzPSJzIj5hbHQgc2VyaWFsaXphdGlvbnM8L3RleHQ+CiAgPHRleHQgeD0iMTU1IiB5PSIxNDciIGNsYXNzPSJzIj5ncmFwaCAvIEpTT048L3RleHQ+CiAgPHJlY3QgeD0iMjA0IiB5PSIxMTQiIHdpZHRoPSI4NCIgaGVpZ2h0PSI0NCIgcng9IjQiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2M4MDQ2NiIvPgogIDx0ZXh0IHg9IjI0NiIgeT0iMTMyIiBjbGFzcz0icyI+Y29tbXVuaXR5PC90ZXh0PgogIDx0ZXh0IHg9IjI0NiIgeT0iMTQ3IiBjbGFzcz0icyI+cHJvamVjdHM8L3RleHQ+CgogIDxwYXRoIGQ9Ik0gMTU1IDE2NiBWIDE5MCIgbWFya2VyLWVuZD0idXJsKCNwNmFycm93KSIvPgogIDx0ZXh0IHg9IjE2MyIgeT0iMTgyIiBjbGFzcz0iZSI+KGFkYXB0KTwvdGV4dD4KCiAgPCEtLSAzLiBjdXN0b21pemF0aW9ucyAtLT4KICA8cmVjdCB4PSIxNSIgeT0iMTkyIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjQ2IiByeD0iNiIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDM0ZDdlIiBzdHJva2UtZGFzaGFycmF5PSI1Ii8+CiAgPHRleHQgeD0iMTU1IiB5PSIyMTMiIGNsYXNzPSJ0Ij5DdXN0b21pemF0aW9ucyAob3B0aW9uYWwpPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMjMwIiBjbGFzcz0icyI+cHJvamVjdC1zcGVjaWZpYyBjaG9pY2VzPC90ZXh0PgoKICA8cGF0aCBkPSJNIDE1NSAyMzggViAyNjIiIG1hcmtlci1lbmQ9InVybCgjcDZhcnJvdykiLz4KICA8dGV4dCB4PSIxNjMiIHk9IjI1NCIgY2xhc3M9ImUiPnByb2Nlc3M8L3RleHQ+CgogIDwhLS0gNC4gb3V0cHV0cyAtLT4KICA8cmVjdCB4PSIxNSIgeT0iMjY0IiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjQ2IiByeD0iNiIgZmlsbD0iI2U4ZjBmNyIgc3Ryb2tlPSIjMDM0ZDdlIi8+CiAgPHRleHQgeD0iMTU1IiB5PSIyODUiIGNsYXNzPSJ0Ij5TY2hlbWEgKyBkb2N1bWVudGF0aW9uPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMzAyIiBjbGFzcz0icyI+dmFsaWRhdGlvbiwgZ3VpZGFuY2UsIGV4YW1wbGVzPC90ZXh0PgoKICA8cGF0aCBkPSJNIDE1NSAzMTAgViAzMzQiIG1hcmtlci1lbmQ9InVybCgjcDZhcnJvdykiLz4KCiAgPCEtLSA1LiBkb2N1bWVudHMgLS0+CiAgPHJlY3QgeD0iMTUiIHk9IjMzNiIgd2lkdGg9IjI4MCIgaGVpZ2h0PSI0NiIgcng9IjYiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzAzNGQ3ZSIvPgogIDx0ZXh0IHg9IjE1NSIgeT0iMzU3IiBjbGFzcz0idCI+VEVJIGRvY3VtZW50czwvdGV4dD4KICA8dGV4dCB4PSIxNTUiIHk9IjM3NCIgY2xhc3M9InMiPmVuY29kZWQgYnkgcHJvamVjdHM8L3RleHQ+CgogIDwhLS0gaW5mcmFzdHJ1Y3R1cmUgLS0+CiAgPHJlY3QgeD0iMzIyIiB5PSI3MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSI2MiIgcng9IjYiIGZpbGw9IiNmYWYwZjUiIHN0cm9rZT0iI2M4MDQ2NiIvPgogIDx0ZXh0IHg9IjM3NyIgeT0iOTMiIGNsYXNzPSJ0Ij5SZWdpc3RyeTwvdGV4dD4KICA8dGV4dCB4PSIzNzciIHk9IjExMSIgY2xhc3M9InMiPnB1Ymxpc2gsIGRpc2NvdmVyPC90ZXh0PgogIDx0ZXh0IHg9IjM3NyIgeT0iMTI2IiBjbGFzcz0icyI+dmVyc2lvbiwgY2l0ZSwgcmV2aWV3PC90ZXh0PgogIDxwYXRoIGQ9Ik0gMjk3IDEwMyBIIDMyMCIgbWFya2VyLWVuZD0idXJsKCNwNmFycm93KSIgbWFya2VyLXN0YXJ0PSJ1cmwoI3A2YXJyb3cpIi8+CgogIDxyZWN0IHg9IjMyMiIgeT0iMTQyIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjQ0IiByeD0iNiIgZmlsbD0iI2U4ZjBmNyIgc3Ryb2tlPSIjMDM0ZDdlIi8+CiAgPHRleHQgeD0iMzc3IiB5PSIxNjEiIGNsYXNzPSJzIj5pbnRlcmFjdGl2ZTwvdGV4dD4KICA8dGV4dCB4PSIzNzciIHk9IjE3NiIgY2xhc3M9InMiPnRvb2xzPC90ZXh0PgogIDxwYXRoIGQ9Ik0gMzIwIDE1OCBIIDI5NyIgbWFya2VyLWVuZD0idXJsKCNwNmFycm93KSIvPgo8L3N2Zz4K"
                    alt="Layered diagram: an abstract model is instantiated into blueprints (council TEI XML, alternative serializations, community ones), optionally adapted by customizations, processed into schemas and documentation, and used to encode TEI documents. A registry exchanges blueprints and interactive tools support them."/>
-            </div>
+            </figure>
           </div>
         </section>
         <section>
@@ -222,21 +231,22 @@
           <p>Council members have spent some independent time experimenting with ideas for P6, but ...</p>
           <ul>
             <li class="fragment">We don’t yet agree on how to move forward.</li>
-            <li class="fragment">We feel the need to check-in with the community before spending more time &amp; resources – Thanks for being here at this session! 👋</li>
+            <li class="fragment">We feel the need to check in with the community before spending more time and resources.</li>
+            <li class="fragment">Thanks for being here at this session! 👋</li>
           </ul>
           <aside class="notes">Click to make images bigger!</aside>
           <div class="columns">
             <figure class="column fragment">
-              <img src="/timeForP6/assets/miro-CmeqO6Wx.png" width="80%" alt="Miro board showing element categorization and removal for P6" data-preview-image/>
+              <img src="/timeForP6/assets/miro-CmeqO6Wx.png" style="width:80%;" alt="Miro board showing element categorization and removal for P6" data-preview-image/>
               <figcaption>Miro board used by Council to sort and scrap P5 elements</figcaption>
             </figure>
             <div class="column">
               <figure class="fragment" style="margin: 0 0 .5em 0; padding: 0;">
-                <img style="margin: 0; padding: 0;" src="/timeForP6/assets/bibl-uml_uhk-DtAMyyB7.png" alt="UML modeling of bibliographic concepts" width="70%" data-preview-image/>
+                <img style="margin: 0; padding: 0; width:70%;" src="/timeForP6/assets/bibl-uml_uhk-DtAMyyB7.png" alt="UML modeling of bibliographic concepts" data-preview-image/>
                 <figcaption >Experimenting with UML modeling</figcaption>
               </figure>
               <figure class="fragment" style="margin: 0; padding: 0;">
-                <img width="70%" style="margin: 0; padding: 0;" src="/timeForP6/assets/tdl-Cc3MPoio.png" alt="concepts for a TEI definition language" data-preview-image/>
+                <img style="margin: 0; padding: 0; width:70%;" src="/timeForP6/assets/tdl-Cc3MPoio.png" alt="concepts for a TEI definition language" data-preview-image/>
                 <figcaption>Experimenting with a language for modeling abstract concepts and blueprints</figcaption>
               </figure>
             </div>
@@ -247,17 +257,17 @@
         <section>
           <h3>Is this P6 worth the trouble? Isn’t P5 fine to continue?</h3>
           <ul>
-            <li class="fragment">Not worth building P6 if it continues to replicate the same kinds of problems</li>
+            <li class="fragment">Not worth building P6 if it replicates the same kinds of problems.</li>
             <li class="fragment">P5 can continue to develop (including adding new features) while P6 is being designed.
               <ul>
-                <li><strong style="color:rgb(200, 4, 102);">TEI P5 : TEI P6 :: Python 2 : Python 3</strong></li>
+                <li><strong style="color:rgb(200, 4, 102); font-size:larger;">TEI P5 : TEI P6 :: Python 2 : Python 3</strong></li>
               </ul>
             </li>
             <li class="fragment">Down the road, a frozen-in-time P5 could become a stable Blueprint of P6 if our concept (abstract+multiple blueprints) proves viable.</li>
-            <li class="fragment">P6 needs to be easier to maintain: Needs modifications to the infrastructure.</li>
-            <li class="fragment">Changes the role of Council in splitting our work for a while.</li>
-            <li class="fragment">If P6 is to develop: needs support for dedicated meetings, consultation with experts.</li>
-          </ul>
+            <li class="fragment">P6 <strong>must</strong> be easier to maintain: Needs modifications to the infrastructure.</li>
+            <li class="fragment">P6 work changes the role of our Technical Council in splitting our work for a while.</li>
+            <li class="fragment">If P6 is to develop, it needs support for dedicated meetings, consultation with experts.</li>
+          </ul> 
         </section>
       </section>
     </div>
