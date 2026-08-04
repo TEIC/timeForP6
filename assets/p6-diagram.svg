@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 392" role="img"
+     aria-labelledby="p6title p6desc">
+  <title id="p6title">P6 model, blueprints, and infrastructure</title>
+  <desc id="p6desc">Layered diagram: an abstract model is instantiated into blueprints (council TEI XML,
+    alternative serializations, community ones), optionally adapted by customizations, processed into
+    schemas and documentation, and used to encode TEI documents. A registry exchanges blueprints and
+    interactive tools support them.</desc>
+  <style>
+    text {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+      text-anchor: middle;
+      fill: #000;
+    }
+    .t { font-size: 15px; }
+    .s { font-size: 11.5px; }
+    .e { font-size: 11px; font-style: italic; text-anchor: start; fill: #034d7e; }
+    path { fill: none; stroke: #034d7e; stroke-width: 1.5; }
+    path.head { fill: #034d7e; stroke: none; }
+  </style>
+  <defs>
+    <marker id="p6arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path class="head" d="M 0 0 L 10 5 L 0 10 z"/>
+    </marker>
+  </defs>
+
+  <!-- 1. abstract model -->
+  <rect x="15" y="8" width="280" height="52" rx="6" fill="#e8f0f7" stroke="#034d7e"/>
+  <text x="155" y="30" class="t">Abstract Model</text>
+  <text x="155" y="48" class="s">concepts, classes, traits, scopes</text>
+
+  <path d="M 155 60 V 84" marker-end="url(#p6arrow)"/>
+  <text x="163" y="76" class="e">instantiate</text>
+
+  <!-- 2. blueprints -->
+  <rect x="15" y="86" width="280" height="80" rx="6" fill="#faf0f5" stroke="#c80466"/>
+  <text x="155" y="105" class="t">Blueprints</text>
+  <rect x="22" y="114" width="84" height="44" rx="4" fill="#fff" stroke="#c80466"/>
+  <text x="64" y="132" class="s">TEI XML</text>
+  <text x="64" y="147" class="s">(council)</text>
+  <rect x="113" y="114" width="84" height="44" rx="4" fill="#fff" stroke="#c80466"/>
+  <text x="155" y="132" class="s">alt serializations</text>
+  <text x="155" y="147" class="s">graph / JSON</text>
+  <rect x="204" y="114" width="84" height="44" rx="4" fill="#fff" stroke="#c80466"/>
+  <text x="246" y="132" class="s">community</text>
+  <text x="246" y="147" class="s">projects</text>
+
+  <path d="M 155 166 V 190" marker-end="url(#p6arrow)"/>
+  <text x="163" y="182" class="e">(adapt)</text>
+
+  <!-- 3. customizations -->
+  <rect x="15" y="192" width="280" height="46" rx="6" fill="#fff" stroke="#034d7e" stroke-dasharray="5"/>
+  <text x="155" y="213" class="t">Customizations (optional)</text>
+  <text x="155" y="230" class="s">project-specific choices</text>
+
+  <path d="M 155 238 V 262" marker-end="url(#p6arrow)"/>
+  <text x="163" y="254" class="e">process</text>
+
+  <!-- 4. outputs -->
+  <rect x="15" y="264" width="280" height="46" rx="6" fill="#e8f0f7" stroke="#034d7e"/>
+  <text x="155" y="285" class="t">Schema + documentation</text>
+  <text x="155" y="302" class="s">validation, guidance, examples</text>
+
+  <path d="M 155 310 V 334" marker-end="url(#p6arrow)"/>
+
+  <!-- 5. documents -->
+  <rect x="15" y="336" width="280" height="46" rx="6" fill="#fff" stroke="#034d7e"/>
+  <text x="155" y="357" class="t">TEI documents</text>
+  <text x="155" y="374" class="s">encoded by projects</text>
+
+  <!-- infrastructure -->
+  <rect x="322" y="72" width="110" height="62" rx="6" fill="#faf0f5" stroke="#c80466"/>
+  <text x="377" y="93" class="t">Registry</text>
+  <text x="377" y="111" class="s">publish, discover</text>
+  <text x="377" y="126" class="s">version, cite, review</text>
+  <path d="M 297 103 H 320" marker-end="url(#p6arrow)" marker-start="url(#p6arrow)"/>
+
+  <rect x="322" y="142" width="110" height="44" rx="6" fill="#e8f0f7" stroke="#034d7e"/>
+  <text x="377" y="161" class="s">interactive</text>
+  <text x="377" y="176" class="s">tools</text>
+  <path d="M 320 158 H 297" marker-end="url(#p6arrow)"/>
+</svg>

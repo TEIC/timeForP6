@@ -168,16 +168,80 @@
         <section>
           <h3>How will P6 be different from P5?</h3>
           <ul>
-            <li class="fragment">Simplify: Reduce redundancies and points of  confusion. </li>
-             <li class="fragment">Make it easier to adapt core concepts, <!-- RV: removed customize, which is a loaded term in P5: P6 customization / blueprinting may be very different --> with more expressive possibilities in modeling.
-              <!-- too early, too little? RV: Elisa I'm working on expanding this now! --> 
-              <ul>
-                <li>P6 Guidelines should centrally provide interactive support for customization processes.</li>
-                <li class="fragment">P6 <q>Blueprint modeling</q>: Expresses customization decisions that may be shared and reviewed.</li>
-               </ul>
-             </li>
+            <li class="fragment">The abstract model should focus on concepts over serialization and content models.</li>
+            <li class="fragment">Simplify: Reduce redundancies and points of confusion.</li>
             <li class="fragment">Prioritize scholarly decision-making process for determining how to mark up texts.</li>
+            <li class="fragment">Make it easier to adapt core concepts, with more expressive possibilities in modeling.</li>
           </ul>
+        </section>
+        <section>
+          <h3>A possible path for P6</h3>
+          <div class="fragment">
+            <h4>Abstract Model: Concepts and Classes</h4>
+            <div class="columns">
+              <div class="column">
+                <ul>
+                  <li class="fragment">P6 should define and describe textual phenomena, starting from current P5 coverage.</li>
+                  <li class="fragment">P6 should organize concepts in a class system</li>
+                </ul>
+              </div>
+              <div class="column fragment">
+                <p class="smaller" style="margin: 0;">Possible inspiration: <a href="https://schema.org/">schema.org</a></p>
+                <img class="column" src="./assets/schemaorg.png"/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>A possible path for P6</h3>
+          <h4>Blueprints</h4>
+          <ul>
+            <li class="fragment">The abstract model gets instantiated into multiple concrete representations, or "blueprints," for specific use cases and serialization targets.</li>
+            <li class="fragment">TEI Council would maintain a number of official blueprints.</li>
+            <li class="fragment">Communities of practice and large projects can define and share their own blueprints and potentially compete with council ones.</li>
+            <li class="fragment">Further customizations can be applied to blueprints to adapt them to specific project needs.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What would P6 and its infrastructure look like?</h3>
+          <div class="columns">
+            <div class="column">
+              <p>Blueprint processes require infrastructure to support the creation, sharing, and adaptation of blueprints.</p>
+              <ul>
+                <li>P6 Guidelines should centrally provide interactive support for blueprint processes.</li>
+                <li>A registry of blueprints should be established, akin to a package manager (PyPI, npm, etc.)</li>
+              </ul>
+            </div>
+            <div class="column">
+              <img class="p6diagram" src="./assets/p6-diagram.svg"
+                   alt="Layered diagram: an abstract model is instantiated into blueprints (council TEI XML, alternative serializations, community ones), optionally adapted by customizations, processed into schemas and documentation, and used to encode TEI documents. A registry exchanges blueprints and interactive tools support them."/>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h4>Experiments</h4>
+          <p>Council members have spent some independent time experimenting with ideas for P6, but ...</p>
+          <ul>
+            <li class="fragment">We don’t yet agree on how to move forward.</li>
+            <li class="fragment">We feel the need to check-in with the community before spending more time &amp; resources – Thanks for being here at this session! 👋</li>
+          </ul>
+          <aside class="notes">Click to make images bigger!</aside>
+          <div class="columns">
+            <figure class="column fragment">
+              <img src="./assets/miro.png" width="80%" alt="Miro board showing element categorization and removal for P6" data-preview-image/>
+              <figcaption>Miro board used by Council to sort and scrap P5 elements</figcaption>
+            </figure>
+            <div class="column">
+              <figure class="fragment" style="margin: 0 0 .5em 0; padding: 0;">
+                <img style="margin: 0; padding: 0;" src="./assets/bibl-uml_uhk.png" alt="UML modeling of bibliographic concepts" width="70%" data-preview-image/>
+                <figcaption >Experimenting with UML modeling</figcaption>
+              </figure>
+              <figure class="fragment" style="margin: 0; padding: 0;">
+                <img width="70%" style="margin: 0; padding: 0;" src="./assets/tdl.png" alt="concepts for a TEI definition language" data-preview-image/>
+                <figcaption>Experimenting with a language for modeling abstract concepts and blueprints</figcaption>
+              </figure>
+            </div>
+          </div>
         </section>
       </section>
       <section>
@@ -185,11 +249,12 @@
           <h3>Is this P6 worth the trouble? Isn’t P5 fine to continue?</h3>
           <ul>
             <li class="fragment">Not worth building P6 if it continues to replicate the same kinds of problems</li>
-            <li class="fragment">P5 can continue to develop (add new features) while P6 is being designed.
+            <li class="fragment">P5 can continue to develop (including adding new features) while P6 is being designed.
               <ul>
                 <li><strong style="color:rgb(200, 4, 102);">TEI P5 : TEI P6 :: Python 2 : Python 3</strong></li>
               </ul>
             </li>
+            <li class="fragment">Down the road, a frozen-in-time P5 could become a stable Blueprint of P6 if our concept (abstract+multiple blueprints) proves viable.</li>
             <li class="fragment">P6 needs to be easier to maintain: Needs modifications to the infrastructure.</li>
             <li class="fragment">Changes the role of Council in splitting our work for a while.</li>
             <li class="fragment">If P6 is to develop: needs support for dedicated meetings, consultation with experts.</li>

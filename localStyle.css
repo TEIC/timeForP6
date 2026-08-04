@@ -58,3 +58,37 @@
 div.footer {
   text-align:left;
 }
+
+/* reusable column layout: each direct child of .columns becomes a column */
+.reveal .columns {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.reveal .columns > .column {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.reveal .columns img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* SVG diagram of the P6 model / blueprint / infrastructure stack:
+   drop the theme's image frame so the diagram sits flat on the slide */
+.reveal img.p6diagram {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.reveal figcaption {
+  font-size: .3em;
+}
