@@ -1,18 +1,39 @@
-.reveal pre code {
-    font-size: .7em;
-}
 .reveal .smaller {
   font-size: .7em;
 }
+.reveal ul li, ol li {
+    font-size: .7em;
+   /* line-height: 1.3em;
+    margin-left:-5cqmin; */
+}
+.reveal q { 
+    color:rgba(25, 3, 112, 0.677);
+    font-style:normal;
+}
+.reveal blockquote {
+    color:rgb(3, 77, 126);
+    font-size: .7em;
+    line-height:1.1em;
+    margin:0;
+    text-align:left; 
+    width:90%;
+}
+.reveal code {
+  font-size: 1em;
+  color:rgb(200, 4, 102);
+}
+.reveal pre code {
+    font-size: 1em;
+}
+
 /* links: underline for accessibility!  */
 .reveal a {text-decoration:underline;}
 
-
 /* ebb: For Flex containers */
-.flex {
+.reveal .flex {
   display: flex;
-  /* gap: 2rem; */
-  align-items: center;
+  gap: 2rem; 
+  align-items: left;
   height:100%; /* fills the available slide height */
 }
 
@@ -31,7 +52,7 @@
 .flex > div {
     flex-grow:1;
     flex-shrink: 1;
-    flex-basis: 60%;
+
 }
 
 div.footer {

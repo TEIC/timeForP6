@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
+    "highlight.js": "^11.11.1",
     "vite": "^8.1.5"
   }
 }
