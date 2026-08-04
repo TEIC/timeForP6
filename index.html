@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>My Presentation</title>
-  <script type="module" crossorigin src="/timeForP6/assets/main-pptGBjBs.js"></script>
+  <title>It’s Time for P6 – TEI2026 Vancouver</title>
+  <script type="module" crossorigin src="/timeForP6/assets/main-DawOxczR.js"></script>
   <link rel="stylesheet" crossorigin href="/timeForP6/assets/main-DM-lE3Y4.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <p>by the TEI Technical Council</p>
         <ul>
           <li>TEI 2026: Thurs. 13 August @ 1pm, Vancouver, BC</li>
-          <li>Link to these slides: <a href=""></a></li>
+          <li>Link to these slides: <a href="https://teic.github.io/timeForP6/">https://teic.github.io/timeForP6/</a></li>
         </ul>
   
       </section>
@@ -22,7 +22,13 @@
         <section><h3>It’s not easy in P5...</h3>
              <ul>
 
-                 <li class="fragment">P5 has too much prescriptiveness. </li>
+                 <li class="fragment">P5 has too much prescriptiveness.
+                    <ul>
+                      <li>“Why can’t I/we?” feature requests <a href="https://github.com/TEIC/TEI/issues?q=is%3Aissue%20%22why%20can%27t%22">are common</a>.</li>
+                      <li><code>&lt;rs&gt;</code> should contain <code>&lt;q&gt;</code> and <code>&lt;quote&gt;</code> (closed <a href="https://github.com/TEIC/TEI/issues/1531">#1531</a>)</li>
+                      <li>Why can’t we use <code>&lt;row&gt;</code> and <code>&lt;cell&gt;</code> within <code>&lt;rdg&gt;</code> and <code>&lt;lem&gt;</code>? (<a href="https://github.com/TEIC/TEI/issues/2000">#2000</a>)</li>
+                    </ul>
+                 </li>
                  <li class="fragment">P5 has too many ways of doing the same thing.
                       <ul>
                         <li><code>&lt;name type="person"&gt;</code> vs. <code>&lt;persName&gt;</code></li>
@@ -31,12 +37,13 @@
                         <li>Where you do you put your <code>&lt;standOff&gt;</code>?</li>
                         <li>Genetic editing (<code>&lt;surface&gt;</code> and <code>&lt;zone&gt;</code>, vs. semantic structures.</li>
                       </ul>
+                      <aside class="notes">We can mention that these two points are in contradiction, but we should present it as a reality of P5 and the need of its community of users. (As opposed to present it as an admission of us picking contradicting examples)</aside>
                   </li>
-                  <li class="fragment">Yes, we realize the previous two points 
-                        are contradictory.</li>
-                  <li class="fragment">Is P5 confusing for beginners? or really, experienced project developers. too?
+                  <!-- <li class="fragment">Yes, we realize the previous two points 
+                        are contradictory.</li> --> <!-- RV: I don't think this is useful on the slide, see speaker notes above.  -->
+                  <li class="fragment">Is P5 confusing for beginners? or really, experienced project developers, too?
                       <ul class="smaller">
-                      <li class="fragment">We allow the scholar to figure out what they need...</li>
+                      <li class="fragment">TEI <!-- RV not we, right? --> allows the scholar to figure out what they need...</li>
                   <li class="fragment">...but <em>only</em> if they're able to produce valid TEI schema conformance.</li></ul>
 
                   </li>
@@ -58,7 +65,7 @@
                 by means of <strong>descriptive prose in the body of these Guidelines</strong>, and 
                 <strong>implicitly by examples of usage</strong>. 
                 Any inconsistency between, for example, the text of these Guidelines and a part of a specification 
-                should be considered an error and reported to the TEI Council for correction.</p>
+                should be considered an error and reported to the TEI Council for correction. <span class="smaller">–source: USE chapter, TEI P5 Guidelines</span></p>
               </blockquote>
           <ul class="smaller">
             <li class="fragment">The <q>Semantic Model</q> isn't really abstract, when it relies on examples of usage, descriptive prose,
@@ -90,7 +97,7 @@
           <ul>
           <li class="fragment">P5 class system introduces confusions over what belongs where, and why it belongs there.</li>
           <li class="fragment">We have <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html">86 different attribute classes</a> 
-            as of Guidelines release 4.12.0. (Think we have enough now?)</li>
+            as of Guidelines release 4.12.0. (Shouldn’t we have enough now? – but requests for rethinking and reshuffling continue to come in.)</li>
           <li class="fragment">How did <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html"><code>att.global.rendition</code></a> get this way?
             Why do we need three attributes for describing rendering in the source text?</li>
 
@@ -105,7 +112,7 @@
                  <li class="fragment">It becomes difficult to figure out how to introduce requested features without tripping over problems
                   with the conformance constraints.</li>
                  <li class="fragment">Stylesheets and infrastructure to maintain P5 is complicated in a brittle way to try to introduce to new Council members.</li> 
-                 <li class="fragment">We need a more robust system.</li>
+                 <li class="fragment"><strong>We need a more robust system.</strong></li>
                  </ul>
         </section>
       </section>
@@ -116,26 +123,19 @@
             <li class="fragment">We need <strong>context-dependent content models</strong>.</li>
             <li class="fragment">Constraints need to be meaningful, not applied to reconcile or compromise for validity.</li>
             <li class="fragment">We will still encode in XML, but TEI should <em>also</em> be readily expressible in other formats (e.g. graph models).</li>
-            <li class="fragment">TEI concepts come first: express them as elements or attributes as needed.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>How will P6 be different from P5?</h3>
-          <ul>
-            <li class="fragment">Simplify: Reduce redundancies and points of  confusion. </li>
-             <li class="fragment">Make it easier to customize, with more expressive possibilities in modeling.
-               <ul>
-                <li>P6 Guidelines should centrally provide interactive support for customization processes.</li>
-                <li class="fragment">P6 <q>Blueprint modeling</q>: Expresses customization decisions that may be shared and reviewed.</li>
-               </ul>
-             </li>
-            <li class="fragment">Prioritize scholarly decision-making process for determining how to mark up texts.</li>
+            <li class="fragment">TEI concepts come first – users should be able to:
+              <ul>
+                <li class="fragment">know how to do something (<em>how do I?</em>)</li>
+                <li class="fragment">how to adjust it to their research needs (<em>why can’t I?</em>)</li>
+                <li class="fragment">express concepts as elements, attributes, or non-XML constructs as needed.</li>
+              </ul>
+            </li>
           </ul>
         </section>
         <section>
           <h4>But P5 is not all bad! What aspects of P5 should continue in P6?</h4>
           <ul class="smaller">
-            <li class="fragment">The TEI header! 
+            <li class="fragment">The TEI header
               <ul>
                 <li>Highly expressive modeling of document metadata for which TEI is widely known / heralded</li>
                 <li>Problematic: Extremely and perhaps unnecessarily prescriptive.</li>
@@ -151,7 +151,7 @@
             <li class="fragment">Multiple encoding methods => encoding methods can be chosen adequately to the methods in your project.</li>
 
             <li class="fragment">We identified this as a problem:  <q>P5 has too many ways of doing the same thing</q>, 
-                    but it is only not the <q>thing</q> that has to be done, but also the <q>way</q> it is done 
+                    but it is not only the <strong>thing</strong> that has to be done, but also the <strong>way</strong> it is done 
                     that needs to be appropriate.
                     <ul>
                     <li>e.g. nested/treelike approaches vs. standoff markup/pointer based vs. milestones.</li>
@@ -163,6 +163,20 @@
                   <li>e.g. when we talk about <code>&lt;pb&gt;</code>, every other edition nerd understands we are talking about <q>page-beginning</q>.</li>
                 </ul>
               </li>
+          </ul>
+        </section>
+        <section>
+          <h3>How will P6 be different from P5?</h3>
+          <ul>
+            <li class="fragment">Simplify: Reduce redundancies and points of  confusion. </li>
+             <li class="fragment">Make it easier to adapt core concepts, <!-- RV: removed customize, which is a loaded term in P5: P6 customization / blueprinting may be very different --> with more expressive possibilities in modeling.
+              <!-- too early, too little? RV: Elisa I'm working on expanding this now! --> 
+              <ul>
+                <li>P6 Guidelines should centrally provide interactive support for customization processes.</li>
+                <li class="fragment">P6 <q>Blueprint modeling</q>: Expresses customization decisions that may be shared and reviewed.</li>
+               </ul>
+             </li>
+            <li class="fragment">Prioritize scholarly decision-making process for determining how to mark up texts.</li>
           </ul>
         </section>
       </section>
