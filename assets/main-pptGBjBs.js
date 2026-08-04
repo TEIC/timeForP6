@@ -112,4 +112,4 @@ https://github.com/highlightjs/highlight.js/issues/2277`),i=e,r=t),n===void 0&&(
   <div class="footer">
     <img width="200" src="${mo}" alt="TEI-C logo" />
   </div>
-`}));t((()=>{Ee(),De(),Oe(),W(),Sn(),fo(),po(),_o(),document.querySelectorAll(`.slides section`).forEach(e=>{e.querySelector(`:scope > section`)||e.insertAdjacentHTML(`beforeend`,go)}),new U({hash:!0,plugins:[xn,uo]}).initialize()}))();
+`}));t((()=>{Ee(),De(),Oe(),W(),Sn(),fo(),po(),_o(),document.querySelectorAll(`.slides section`).forEach(e=>{e.querySelector(`:scope > section`)||e.insertAdjacentHTML(`beforeend`,go)}),new U({hash:!0,slideNumber:!0,plugins:[xn,uo]}).initialize()}))();
