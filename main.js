@@ -6,7 +6,8 @@ import './localStyle.css';
 // optional plugins — also renamed, no more .esm.js suffix
 import Markdown from 'reveal.js/plugin/markdown';
 import Highlight from 'reveal.js/plugin/highlight';
-import 'highlight.js/styles/xcode.css'; 
+import Notes from 'reveal.js/plugin/notes';
+import 'highlight.js/styles/xcode.css';
 
 //footer import
 import { footerHTML } from './footer-template.js';
@@ -21,7 +22,7 @@ document.querySelectorAll('.slides section').forEach((section) => {
 const deck = new Reveal({
   hash: true,
   slideNumber: true,
-  plugins: [ Markdown, Highlight ],
+  plugins: [ Markdown, Highlight, Notes ],
 });
 
 deck.initialize();
