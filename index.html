@@ -77,7 +77,7 @@
           </ul>
           </section>
           <section>
-            <h4>Context-dependent content models need workaround</h3>
+            <h4>Context-dependent content models need workaround</h4>
             <ul>
               <li class="fragment">P5 cannot directly express content-dependent content models.</li>
               <li class="fragment"><code>&lt;p&gt;</code> in <code>fileDesc/sourceDesc</code> vs. <code>&lt;p&gt;</code> in <code>body/div</code> require different content models</li>
@@ -86,7 +86,7 @@
             </ul>
           </section>
           <section>
-            <h4>When content models influcence encoding choices</h4>
+            <h4>When content models influence encoding choices</h4>
             <ul>
               <li>Do we choose <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html"><code>&lt;ab&gt;</code></a> vs. 
                 <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html"><code>&lt;p&gt;</code></a> because one of these is allowed to
@@ -117,12 +117,14 @@
             <h4>Model classes and attribute classes are confusing</h4>
           <ul>
           <li class="fragment">P5 class system introduces confusions over what belongs where, and why it belongs there.</li>
-          <li class="fragment">We have <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html">86 different attribute classes</a> 
+            <li class="fragment">We have <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html">86 different attribute classes</a> and 
+              <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html">127 model classes</a>
             as of Guidelines release 4.12.0. (Shouldn’t we have enough now? – but requests for rethinking and reshuffling continue to come in.)</li>
           <li class="fragment">How did <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html"><code>att.global.rendition</code></a> get this way?
             Why do we need three attributes for describing rendering in the source text?</li>
-          <li class="fragment">The modular organization of classes, macros, and datatypes is inconsistent (<a href="https://github.com/TEIC/TEI/issues/1710">#1710</a>).</li>
-<aside class="notes">Although att.damaged is defined in the tei module and att.coordinates in the transcr module, both are only applicable to elements in the transcr module.</aside>
+          <li class="fragment">The modular organization of classes, macros, and datatypes is inconsistent (<a href="https://github.com/TEIC/TEI/issues/1710">#1710</a>).
+            <aside class="notes">Although att.damaged is defined in the tei module and att.coordinates in the transcr module, both are only applicable to elements in the transcr module.</aside>
+          </li>
           </ul>
           
           </section>
@@ -163,7 +165,7 @@
                 <li>Nevertheless, an excellent place for standardizing data exchange.</li>
               </ul>
              </li>
-             <li class="fragment">Capacity to prepare many kinds of output data from the same "ground" source TEI document.</li>
+            <li class="fragment">Capacity to prepare many kinds of output data from the same <q>ground</q> source TEI document.</li>
             <li class="fragment">Encoding in XML and tree structure for ease of processing
                <ul>
                  <li>e.g., <code>standOff</code> data structures together with trees for preparing editions and data</li>
