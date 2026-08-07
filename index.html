@@ -29,28 +29,31 @@
                       <li>Why can’t we use <code>&lt;row&gt;</code> and <code>&lt;cell&gt;</code> within <code>&lt;rdg&gt;</code> and <code>&lt;lem&gt;</code>? (<a href="https://github.com/TEIC/TEI/issues/2000">#2000</a>)</li>
                     </ul>
                  </li>
-                 <li class="fragment">P5 has too many ways of doing the same thing.
+                 <li class="fragment">P5 has too many ways of doing (much) the same thing.
                       <ul>
                         <li><code>&lt;name type="person"&gt;</code> vs. <code>&lt;persName&gt;</code></li>
-                        <li><code>&lt;ref&gt; </code> and <code>&lt;ptr&gt;</code></li>
+                        <li><code>&lt;ref&gt;</code> and <code>&lt;ptr&gt;</code></li>
                         <li><code>@ref</code>, <code>@corresp</code>, <code>@key</code></li>
                         <li>Where you do you put your <code>&lt;standOff&gt;</code>?</li>
-                        <li>Genetic editing (<code>&lt;surface&gt;</code> and <code>&lt;zone&gt;</code>) , vs. semantic structures.</li>
+                        <li>Genetic editing (<code>&lt;surface&gt;</code> and <code>&lt;zone&gt;</code>) , vs. semantic structures (<code>&lt;text&gt;</code> and <code>&lt;div&gt;</code>).</li>
                       </ul>
                       <aside class="notes">We can mention that these two points are in contradiction, but we should present it as a reality of P5 and the need of its community of users. (As opposed to present it as an admission of us picking contradicting examples)</aside>
                   </li>
                   <!-- <li class="fragment">Yes, we realize the previous two points 
                         are contradictory.</li> --> <!-- RV: I don't think this is useful on the slide, see speaker notes above.  -->
-                  <li class="fragment">Is P5 confusing for beginners? or, really, for experienced project developers, too?
+                  <li class="fragment">Is P5 confusing for beginners—or even for experienced developers?
                       <ul>  
-                      <li class="fragment">TEI <!-- RV not we, right? --> allows scholars to figure out what they need ...</li>
+                      <li class="fragment">TEI <!-- RV not we, right? --> allows scholars to encode what they need ...</li>
                   <li class="fragment">... but <em>only</em> if they're able to produce valid TEI schema conformance.</li></ul>
 
                   </li>
                       </ul>
         </section>
         <section>
-            <h4>What do we mean by P5’s <q>Abstract Model</q>?</h4>
+            <h4>The <q>Abstract Model</q> is not abstract enough</h4>
+
+            <!-- MS: this definition uses abstract model, semantic model and conceptual model. Should we 
+             address this in more detail? -->
 
               <blockquote class="smaller"><p class="fragment smaller">A document is said to conform to the TEI Abstract Model if features 
                 for which an encoding is proposed by the TEI Guidelines are encoded within it 
@@ -68,13 +71,31 @@
                 should be considered an error and reported to the TEI Council for correction. <span class="smaller">–source: USE chapter, TEI P5 Guidelines</span></p>
               </blockquote>
           <ul class="smaller">
-            <li class="fragment">The <q>Semantic Model</q> isn't really abstract, when it relies on examples of usage, descriptive prose,
-              as well as schema definitions.</li>
-              
+            <li class="fragment">The <q>Semantic Model</q> isn't really abstract, when it relies on schema definitions, descriptive prose, as well as examples of usage.</li>
+            <!-- MS: for easier readability I've changed this to the same order as in the quote-->  
             
           </ul>
           </section>
           <section>
+            <h4>Context-dependent content models need workaround</h4>
+            <ul>
+              <li class="fragment">P5 cannot directly express content-dependent content models.</li>
+              <li class="fragment"><code>&lt;p&gt;</code> in <code>fileDesc/sourceDesc</code> vs. <code>&lt;p&gt;</code> in <code>body/div</code> require different content models</li>
+              <li class="fragment">Current workaround: Use <code>&lt;altIdent&gt;</code> to define two different patterns. (It's difficult for most of us to know how to do that!
+              And it should be trivially easy.)</li>
+            </ul>
+          </section>
+          <section>
+            <h4>When content models influence encoding choices</h4>
+            <ul>
+              <li>Do we choose <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html"><code>&lt;ab&gt;</code></a> vs. 
+                <a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-p.html"><code>&lt;p&gt;</code></a> because one of these is allowed to
+               self-nest and the other is not permitted to do so?</li>
+              <li>Modeling limitations should not force encoders to choose markup for structural rather than semantic reasons.</li>
+            </ul>
+          </section>
+
+          <!--<section>
             <h3>When P5 modeling strains semantics</h3>
           <div class="flex">
             <div class="fragment smaller">
@@ -90,17 +111,20 @@
                self-nest and the other is not permitted to do so?</p>
               </div>
             </div>
-          </section>
+          </section>-->
 
           <section>
-            <h4>Classes and models are confusing</h4>
+            <h4>Model classes and attribute classes are confusing</h4>
           <ul>
           <li class="fragment">P5 class system introduces confusions over what belongs where, and why it belongs there.</li>
-          <li class="fragment">We have <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html">86 different attribute classes</a> 
+            <li class="fragment">We have <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html">86 different attribute classes</a> and 
+              <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html">127 model classes</a>
             as of Guidelines release 4.12.0. (Shouldn’t we have enough now? – but requests for rethinking and reshuffling continue to come in.)</li>
           <li class="fragment">How did <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.rendition.html"><code>att.global.rendition</code></a> get this way?
             Why do we need three attributes for describing rendering in the source text?</li>
-
+          <li class="fragment">The modular organization of classes, macros, and datatypes is inconsistent (<a href="https://github.com/TEIC/TEI/issues/1710">#1710</a>).
+            <aside class="notes">Although att.damaged is defined in the tei module and att.coordinates in the transcr module, both are only applicable to elements in the transcr module.</aside>
+          </li>
           </ul>
           
           </section>
@@ -141,7 +165,7 @@
                 <li>Nevertheless, an excellent place for standardizing data exchange.</li>
               </ul>
              </li>
-             <li class="fragment">Capacity to prepare many kinds of output data from the same "ground" source TEI document.</li>
+            <li class="fragment">Capacity to prepare many kinds of output data from the same <q>ground</q> source TEI document.</li>
             <li class="fragment">Encoding in XML and tree structure for ease of processing
                <ul>
                  <li>e.g., <code>standOff</code> data structures together with trees for preparing editions and data</li>
@@ -155,7 +179,7 @@
         <section>
           <h4>Wisdom accrued from P5</h4>
           <ul>
-            <li class="fragment"><q>P5 has too many ways of doing the same thing</q>, 
+            <li class="fragment"><q>P5 has too many ways of doing (much) the same thing.</q>, 
               but it is not only the <strong>thing</strong> that has to be done, but also the <strong>way</strong> it is done 
               that needs to be appropriate.
               <ul>
@@ -175,7 +199,7 @@
         <section>
           <h4>How will P6 be different from P5?</h4>
           <ul>
-            <li class="fragment">The abstract model should focus on concepts over serialization and content models.</li>
+            <li class="fragment">The abstract model should focus on concepts and their relationships over content models and serialization.</li>
             <li class="fragment">Simplify: Reduce redundancies and points of confusion.</li>
             <li class="fragment">Prioritize scholarly decision-making process for determining how to mark up texts.</li>
             <li class="fragment">Make it easier to adapt core concepts, with more expressive possibilities in modeling.</li>
