@@ -79,7 +79,7 @@
           <section>
             <h4>Context-dependent content models need workaround</h4>
             <ul>
-              <li class="fragment">P5 cannot directly express content-dependent content models.</li>
+              <li class="fragment">P5 cannot directly express context-dependent content models.</li>
               <li class="fragment"><code>&lt;p&gt;</code> in <code>fileDesc/sourceDesc</code> vs. <code>&lt;p&gt;</code> in <code>body/div</code> require different content models</li>
               <li class="fragment">Current workaround: Use <code>&lt;altIdent&gt;</code> to define two different patterns. (It's difficult for most of us to know how to do that!
               And it should be trivially easy.)</li>
@@ -131,7 +131,7 @@
           <section>
             <h4>Over time, problems accumulate</h4>
           <ul>
-                 <li class="fragment">When P5 was launched, Council had been recently established in its current form to maintain and update it.</li>
+                 <li class="fragment">Council had been established in 2002 to help create and launch P5 (2007), and thereafter to maintain and update it.</li>
                  <li class="fragment">Consistency in updates was difficult / impossible over time.</li>
                  <li class="fragment">It becomes difficult to introduce requested features without tripping over problems with conformance constraints.</li>
                  <li class="fragment">Stylesheets and infrastructure to maintain P5 is complicated in a brittle way to try to introduce to new Council members.</li> 
@@ -250,6 +250,23 @@
             </figure>
           </div>
         </section>
+      </section>
+      <section>
+        <section>
+          <h3>Is this P6 worth the trouble?</h3>
+          <ul>
+            <li class="fragment">Not worth building P6 if it replicates the same kinds of problems.</li>
+            <li class="fragment">P5 can continue to develop (including adding new features) while P6 is being designed.
+              <ul>
+                <li><strong style="color:rgb(200, 4, 102); font-size:larger;">TEI P5 : TEI P6 :: Python 2 : Python 3</strong></li>
+              </ul>
+            </li>
+            <li class="fragment">Down the road, a frozen-in-time P5 could become a stable Blueprint of P6 if our concept (abstract+multiple blueprints) proves viable.</li>
+            <li class="fragment">P6 <strong>must</strong> be easier to maintain: Needs modifications to the infrastructure.</li>
+            <li class="fragment">P6 work changes the role of our Technical Council in splitting our work for a while.</li>
+            <li class="fragment">If P6 is to develop, it needs support for dedicated meetings, consultation with experts.</li>
+          </ul> 
+        </section>
         <section>
           <h4>Experiments</h4>
           <p>Council members have spent some independent time experimenting with ideas for P6, but ...</p>
@@ -275,23 +292,6 @@
               </figure>
             </div>
           </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h3>Is this P6 worth the trouble? Isn’t P5 fine to continue?</h3>
-          <ul>
-            <li class="fragment">Not worth building P6 if it replicates the same kinds of problems.</li>
-            <li class="fragment">P5 can continue to develop (including adding new features) while P6 is being designed.
-              <ul>
-                <li><strong style="color:rgb(200, 4, 102); font-size:larger;">TEI P5 : TEI P6 :: Python 2 : Python 3</strong></li>
-              </ul>
-            </li>
-            <li class="fragment">Down the road, a frozen-in-time P5 could become a stable Blueprint of P6 if our concept (abstract+multiple blueprints) proves viable.</li>
-            <li class="fragment">P6 <strong>must</strong> be easier to maintain: Needs modifications to the infrastructure.</li>
-            <li class="fragment">P6 work changes the role of our Technical Council in splitting our work for a while.</li>
-            <li class="fragment">If P6 is to develop, it needs support for dedicated meetings, consultation with experts.</li>
-          </ul> 
         </section>
       </section>
     </div>
