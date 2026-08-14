@@ -22,7 +22,8 @@ document.querySelectorAll('.slides section').forEach((section) => {
 const deck = new Reveal({
   hash: true,
   slideNumber: true,
-  plugins: [ Markdown, Highlight, Notes ],
+  pdfSeparateFragments: false,
+  plugins: [ Markdown, Highlight ],
 });
 
 deck.initialize();
